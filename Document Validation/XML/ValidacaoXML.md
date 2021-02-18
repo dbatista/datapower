@@ -10,25 +10,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <!-- definition of simple elements -->
-    <xs:element name="orderperson" type="xs:string"/>
-    <xs:element name="name" type="xs:string"/>
-    <xs:element name="address" type="xs:string"/>
-    <xs:element name="city" type="xs:string"/>
-    <xs:element name="country" type="xs:string"/>
-    <xs:element name="title" type="xs:string"/>
-    <xs:element name="note" type="xs:string"/>
-    <xs:element name="quantity" type="xs:positiveInteger"/>
-    <xs:element name="price" type="xs:decimal"/>
+<xs:element name="shiporder">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="orderperson" type="xs:string"/>
+      <xs:element name="shipto">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="country" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="item" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="note" type="xs:string" minOccurs="0"/>
+            <xs:element name="quantity" type="xs:positiveInteger"/>
+            <xs:element name="price" type="xs:decimal"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="orderid" type="xs:string" use="required"/>
+  </xs:complexType>
+</xs:element>
 
-    <!-- definition of attributes -->
-    <xs:attribute name="orderid" type="xs:string"/>
 </xs:schema>
 ```
 ## Exemplo de XML: 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 
+<shiporder orderid="889923"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="shiporder.xsd">
   <orderperson>John Smith</orderperson>
   <shipto>
     <name>Ola Nordmann</name>
@@ -47,6 +66,7 @@
     <quantity>1</quantity>
     <price>9.90</price>
   </item>
+</shiporder>
 ```
 ### O XSD irá fazer a validação do XML, portanto o que a gente precisa é ter apenas o XSD no lado do Datapower para ele fazer as validações.
 
