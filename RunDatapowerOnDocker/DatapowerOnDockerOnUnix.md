@@ -26,7 +26,20 @@ docker run -it \
 ```
 
 
-#### Com isso, ele irá subir uma imagem nova, liberando 30 portas para uso, da 7000 até a 7030, que pode ser utilizadas para o HTTP Handlers por exemplo.
+#### Com isso, ele irá subir uma imagem nova, liberando 30 portas para uso, da 7000 até a 7030, que pode ser utilizadas para o HTTP Handlers por exemplo, porém o console web ainda não estará disponível, para inicia-lo, após iniciar o datapower via linha de comando você irá colocar com o usuário/senha admin/admin.
+
+#### Para ativar o console web será necessário configurá-lo da seguinte forma:
+```
+configure terminal
+web-mgmt
+admin-state enabled
+local-address eth0_ipv4_1 "9090"
+exit
+```
+
+![image](images/macConfigWebCOnsole.png) 
+
 
 #### Acesse a url: https://localhost:9090
 ![image](images/login.png) 
+
