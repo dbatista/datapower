@@ -37,7 +37,7 @@ local-address eth0_ipv4_1 "9090"
 exit
 ```
 
-![image](images/macConfigWebCOnsole.png) 
+![image](images/MacConfig.png) 
 
 
 #### Acesse a url: https://localhost:9090
