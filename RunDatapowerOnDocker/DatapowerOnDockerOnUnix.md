@@ -35,6 +35,7 @@ web-mgmt
 admin-state enabled
 local-address eth0_ipv4_1 "9090"
 exit
+write mem
 ```
 
 ![image](images/MacConfig.png) 
