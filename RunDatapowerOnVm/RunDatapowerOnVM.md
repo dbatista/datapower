@@ -31,7 +31,4 @@
 
 ### Para gerar um ambiente será necessário ter feito o download da imagem no [IBM Passport Advantage](https://www.ibm.com/software/passportadvantage/pao_customer.html), após o download do arquivo ***OVA*** será necessário importa-lo no VMWare.
 
-[Assistir vídeo de instalação em 4k](https://idg.s3.us.cloud-object-storage.appdomain.cloud/setupInicialDP.mov).
-
-
-[Assistir vídeo de instalação em 720p](https://idg.s3.us.cloud-object-storage.appdomain.cloud/setupInicialDP720p.mov).
+[![Vídeo de instalação](https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2019/06/maxresdefault-1024x576.jpg)](https://youtu.be/pJLzbh2BCYE)
