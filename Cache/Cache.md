@@ -115,10 +115,7 @@ Clique no botão *Add*
 1. Acesse a funcionalidade **eXtreme Scale Grid** e clique no botão *Add* 
 ![Cache com grid](midia/exGrid.png) 
 
-2. Acesse a funcionalidade **eXtreme Scale Grid** e clique no botão *Add* 
-![Cache com grid](midia/exGrid.png) 
-
-3. Na configuração do eXtreme Scale atribua um nome para o serviço e defina os seguintes atributos:
+2. Na configuração do eXtreme Scale atribua um nome para o serviço e defina os seguintes atributos:
     - **Collective:** Nome do Load Balancer Group criado.
     - **Grid Name:** Nome do grid criado no eXtreme Scale
     - **User:** Usuário definido para login no eXtreme Scale
